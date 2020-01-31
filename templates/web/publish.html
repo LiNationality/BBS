@@ -1,0 +1,80 @@
+{% extends 'web/home.html' %}
+
+
+{% block content %}
+
+    <section id="features" class="features">
+      <div class="container">
+      <h1>发布文章</h1>
+          <form accept-charset="UTF-8" action="/publish/" class="publish" id="new_topic" method="post"  enctype="multipart/form-data">
+            {% csrf_token %}
+            <table width="100%" border="0" cellspacing="0" cellpadding="6">
+                <colgroup>
+                    <col width="140">
+                    <col>
+                </colgroup>
+                <tbody>
+
+                <tr>
+                    <th>帖子标题</th>
+                    <td>
+                        <label>
+                            <input class="form-control" required id="topic_title" maxlength="80" name="t_title" size="60" type="text">
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th valign="top">帖子简介</th>
+                    <td>
+                        <label>
+                            <input class="form-control" required id="topic_introduce" maxlength="80" name="t_introduce" size="60" type="text">
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th valign="top">帖子内容</th>
+                    <td>
+                        <div class="body_count">
+                            <textarea class="form-control" style="width: 700px;" cols="62" rows="20" name="t_content"></textarea>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>封面图</th>
+                    <td>
+
+                        <div>
+                            <input class="form-control" style="width: 400px;" cols="62" rows="20" type="file" name="t_photo" accept="image/*">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>类别</th>
+                    <td>
+                        <div>
+                            <select class="form-control" style="width: 400px;" cols="62" rows="20" name="t_kind">
+                                {% for kind in kinds %}
+                                    <option  value="{{ kind.id }}">{{ kind.k_name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th></th>
+                    <td>
+                        <button class="btn btn-primary btn-lg" type="submit">发表帖子</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+
+      </div>
+    </section>
+
+{% endblock %}

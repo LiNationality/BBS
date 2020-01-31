@@ -1,0 +1,189 @@
+{% extends 'base.html' %}
+{% block header %}
+     <span class="navbar-page-title"> 个人信息 </span>
+{% endblock %}
+{% block left_concent %}
+        <li class="nav-item active"> <a href="/user_info"><i class="mdi mdi-account"></i> 个人信息</a> </li>
+        <li class="nav-item"> <a href="/pwd_edit"><i class="mdi mdi-lock-outline"></i> 修改密码</a> </li>
+        <li class="nav-item"> <a href="/my_art"><i class="mdi mdi-send"></i> 发布文章</a> </li>
+        <li class="nav-item"> <a href="index.html"><i class="mdi mdi-home"></i> 其他</a> </li>
+{% endblock %}
+
+{% block concent %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card container">
+              <div class="card-header"><h4>基本信息</h4></div>
+              <div class="card-body">
+
+                <form accept-charset="UTF-8" class="form-horizontal" action="#" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                  <div class="form-group">
+                    <label class="col-xs-12" for="user_id">用户身份证ID</label>
+                    <div class="col-xs-12">
+                      <input class="form-control" type="text" id="user_id" name="user_id" placeholder="{{ userobj.user_id }}" value="{{ userobj.user_id }}" disabled>
+                    </div>
+
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-12" for="name">姓名</label>
+                    <div class="col-xs-12">
+                      <input class="form-control" type="text" id="name" name="name" placeholder="{{ userobj.name }}" value="{{ userobj.name }}" disabled>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-xs-12" for="email">邮箱</label>
+                    <div class="col-xs-12">
+                            <input class="form-control" type="email" id="email" name="email" placeholder="{{ userobj.email }}" value="{{ userobj.email }}"/>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-12" for="nickname">昵称</label>
+                    <div class="col-xs-12">
+                            <input class="form-control" type="text" id="nickname" name="nickname" placeholder="{{ userobj.nickname }}" value="{{ userobj.nickname }}">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-12" for="sex">性别</label>
+                    <div class="col-xs-12">
+                      <select class="form-control" id="sex" name="sex" size="1">
+                          <option value="1">男</option>
+                          <option value="0">女</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-12" for="age">年龄</label>
+                    <div class="col-xs-12">
+                      <input class="form-control" type="text" id="age" name="age" placeholder="{{ userobj.age }}" value="{{ userobj.age }}" >
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-12" for="phone">Phone</label>
+                    <div class="col-xs-12">
+                            <input class="form-control" type="text" id="phone" name="phone" placeholder="{{ userobj.phone }}" value="{{ userobj.phone }}">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-12" for="country">国家</label>
+                    <div class="col-xs-12">
+                            <input class="form-control" type="text" id="country" name="country" placeholder="{{ userobj.country }}" value="{{ userobj.country }}">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-12" for="province">省份</label>
+                    <div class="col-xs-12">
+                            <input class="form-control" type="text" id="province" name="province" placeholder="{{ userobj.province }}" value="{{ userobj.province }}" >
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-12" for="city">城市</label>
+                    <div class="col-xs-12">
+                            <input class="form-control" type="text" id="city" name="city" placeholder="{{ userobj.city }}" value="{{ userobj.city }}" >
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-12" for="location">详细地址</label>
+                    <div class="col-xs-12">
+                      <textarea class="form-control" id="location" name="location" rows="6" placeholder="{{ userobj.location }}">{{ userobj.location }}</textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-xs-12">
+                      <button class="btn btn-primary btn-block btn-lg" id="submingo" name="submingo" data-toggle="modal" data-target="#myModal" type="button">马上提交</button>
+                    </div>
+                  </div>
+                </form>
+
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">提交信息</h4>
+                      </div>
+                      <div class="modal-body" id="msg_tis">
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block jscode %}
+    <script type="text/javascript">
+        $(function () {
+            bindSubmitgo();
+        });
+        function bindSubmitgo() {
+            $('#submingo').click(function () {
+                var user_id=$('#user_id').val();
+                var name=$('#name').val();
+                var email=$('#email').val();
+                var nickname=$('#nickname').val();
+                var sex=$('#sex').val();
+                var age=$('#age').val();
+                var phone=$('#phone').val();
+                var country=$('#country').val();
+                var province=$('#province').val();
+                var city=$('#city').val();
+                var location=$('#location').val();
+                //var phone=$('#phone').val();
+                /*alert(user_id);
+                alert(name);
+                alert(email);
+                alert(nickname);
+                alert(age);
+                alert(phone);
+                alert(country);
+                alert(province);
+                alert(city);
+                alert(location);*/
+                //alert(location)
+
+                $.ajax({
+                    url:window.location.href,
+                    type:'POST',
+                    data:{
+                        'user_id':user_id,
+                        'name':name,
+                        'email':email,
+                        'nickname':nickname,
+                        'sex':sex,
+                        'age':age,
+                        'phone':phone,
+                        'country':country,
+                        'province':province,
+                        'city':city,
+                        'location':location,
+                    },
+                    dataType:'JSON',
+                    beforeSend: function (xhr, settings) {
+                        xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");    // csrf
+                    },
+                    success:function (data) {
+                        //alert(data.msg);
+                        //if (data.status) alert(data.msg);
+                        //$('#lab').text(data.msg);
+                        //document.getElementById('lab').innerText=data.msg
+                        $('#msg_tis').text(data.msg);
+                        window.location.href="/user_info";
+                    }
+                })
+            })
+        }
+
+    </script>
+{% endblock %}

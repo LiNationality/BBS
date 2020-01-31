@@ -1,0 +1,55 @@
+{% extends 'Test/table_index.html' %}
+{% load tags %}
+{% block concent %}
+     <h5>状态类</h5>
+            {{ admin_app }}
+
+                <table class="table">
+                  <thead>
+                    <tr class="success">
+                        <th></th>
+                        <th></th>
+
+                      <th>{% render_table_name table %}</th>
+
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+
+                      <th>操&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                  {% for table_obj in table_objs %}
+                    <tr class="active success">
+                        <th></th>
+                        <th></th>
+                        {% render_table_url request table_obj %}
+{#                      <td>#}
+{##}
+{#                          <a class="" href="">{{ table_obj.uid }}</a>#}
+{#                      </td>#}
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+
+                      <td>
+                        <div class="btn-group">
+                            <a class="btn btn-xs btn-default" href="#" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
+                            <a class="btn btn-xs btn-default" href="#" title="删除" data-toggle="tooltip"><i class="mdi mdi-window-close"></i></a>
+                        </div>
+                    </td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+
+                </table>
+                {% for page in page_list %}
+                    {{ page|safe }}
+                {% endfor %}
+
+{% endblock %}

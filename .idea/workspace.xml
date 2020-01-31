@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2227f853-4cae-4476-ac2e-4d4150c563b7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WBrfHnIQyMonufl3dGdxenqKIX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../PerfectCRMday77-项目代码/PerfectCRMday-项目代码" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MiWindows\Desktop\yangwan\GenealogyForum\templates\Test" />
+      <recent name="C:\Users\MiWindows\Desktop\yangwan\GenealogyForum\test_app" />
+      <recent name="C:\Users\MiWindows\Desktop\yangwan\GenealogyForum\templates" />
+      <recent name="C:\Users\MiWindows\Desktop\yangwan\GenealogyForum\static\images" />
+      <recent name="C:\Users\MiWindows\Desktop\yangwan\GenealogyForum\static\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MiWindows\Desktop\yangwan\GenealogyForum\my_admin\util" />
+      <recent name="C:\Users\MiWindows\Desktop\yangwan\GenealogyForum\templates\web" />
+      <recent name="C:\Users\MiWindows\Desktop\yangwan\GenealogyForum\templates\Source" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="GenealogyForum" type="Python.DjangoServer" factoryName="Django server">
+      <module name="GenealogyForum" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="GenealogyForum.settings" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Python_environment\Anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="80" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2227f853-4cae-4476-ac2e-4d4150c563b7" name="Default Changelist" comment="" />
+      <created>1578633930876</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578633930876</updated>
+      <workItem from="1578633934792" duration="735000" />
+      <workItem from="1578635015422" duration="609000" />
+      <workItem from="1578640384545" duration="6141000" />
+      <workItem from="1578818743292" duration="1839000" />
+      <workItem from="1578843204706" duration="27798000" />
+      <workItem from="1578906348336" duration="50347000" />
+      <workItem from="1579088093432" duration="6434000" />
+      <workItem from="1579101372917" duration="3259000" />
+      <workItem from="1579145398720" duration="25258000" />
+      <workItem from="1579198673514" duration="422000" />
+      <workItem from="1579236226714" duration="4549000" />
+      <workItem from="1579270250649" duration="7794000" />
+      <workItem from="1579356784999" duration="15364000" />
+      <workItem from="1579372745801" duration="5896000" />
+      <workItem from="1579402154620" duration="16597000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="410" y="240" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578845285276">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="410" y="240" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1578845285276" />
+    <state x="1086" y="302" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578645000147">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1086" y="302" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1578645000147" />
+    <state x="1071" y="298" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578849030507">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1071" y="298" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1578849030507" />
+    <state x="828" y="377" key="FileChooserDialogImpl" timestamp="1579410634481">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="828" y="377" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1579410634481" />
+    <state width="1353" height="184" key="GridCell.Tab.0.bottom" timestamp="1579420890310">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1353" height="184" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1579420890310" />
+    <state width="1353" height="184" key="GridCell.Tab.0.center" timestamp="1579420890310">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1353" height="184" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1579420890310" />
+    <state width="1353" height="184" key="GridCell.Tab.0.left" timestamp="1579420890310">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1353" height="184" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1579420890310" />
+    <state width="1353" height="184" key="GridCell.Tab.0.right" timestamp="1579420890310">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1353" height="184" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1579420890310" />
+    <state x="191" y="88" width="901" height="749" key="dock-window-1" timestamp="1579409549175">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="191" y="88" width="901" height="749" key="dock-window-1/0.0.1920.1050@0.0.1920.1050" timestamp="1579409549175" />
+    <state x="1037" y="288" width="672" height="678" key="search.everywhere.popup" timestamp="1579414616129">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1037" y="288" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1579414616129" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/templates/Source/lyear_2_LightYear-admin/lyear_forms_elements.html</url>
+          <line>269</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>族谱</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="/static/web/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="/static/web/vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Custom Font Icons CSS-->
+    <link rel="stylesheet" href="/static/css/landy-iconfont.css">
+    <!-- Google fonts - Open Sans-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800">
+    <!-- owl carousel-->
+    <link rel="stylesheet" href="/static/web/vendor/owl.carousel/assets/owl.carousel.css">
+    <link rel="stylesheet" href="/static/web/vendor/owl.carousel/assets/owl.theme.default.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="/static/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="/static/css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!-- navbar-->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg fixed-top"><a href="index.html" class="navbar-brand">杨氏族谱论坛</a>
+        <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><span></span><span></span><span></span></button>
+        <div id="navbarSupportedContent" class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto align-items-start align-items-lg-center">
+            <li class="nav-item"><a href="/all_top-0-0-0" class="nav-link link-scroll">全部</a></li>
+            <li class="nav-item"><a href="/publish" class="nav-link link-scroll">发表</a></li>
+            <li class="nav-item"><a href="/user_info" class="nav-link link-scroll">个人管理</a></li>
+            <li class="nav-item"><a href="" class="nav-link">看贴</a></li>
+          </ul>
+
+
+              {% if user %}
+              <a href="" class="btn btn-primary">
+               用户：
+                <span>{{ user.user_id }}&nbsp;({{ user.name }}) <span class="caret"></span></span>
+              </a>
+              {% else %}
+                  <div class="navbar-text">
+                  <a href="/login" data-toggle="modal"  class="btn btn-success">登录</a>
+                  </div>
+              {% endif %}
+
+        </div>
+      </nav>
+    </header>
+    <!-- Modal-->
+    {% block content %}
+        <section id="hero" class="hero hero-home bg-gray">
+          <div class="container">
+            <div class="row d-flex">
+              <div class="col-lg-6 text order-2 order-lg-1">
+                <h1>欢迎来到牛角山族谱网</h1>
+                <p class="hero-text">
+                    在这里看美丽的风景，梦幻般的风俗习惯。这里山峦耸立，山尖风云薄雾环绕，客观可叹为之陶渊明的梦中仙境，
+                且山间河流自西向东，平淡缓慢，如河之圣人。
+                </p>
+                <div class="CTA"><a href="#features" class="btn btn-primary btn-shadow btn-gradient link-scroll">更多</a><a href="#" class="btn btn-outline-primary">现在登录</a></div>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2"><img src="/static/images/band-member-3.jpg" alt="..." class="img-fluid"></div>
+            </div>
+          </div>
+        </section>
+        <section id="testimonials" class="testimonials">
+          <div class="container">
+            <header class="text-center no-margin-bottom">
+              <h2>今日推荐</h2>
+              <p class="lead">点击下方了解最新新闻，如果想要了解更多，请翻到下面或者点击查看全部文章。</p>
+            </header>
+            <div class="owl-carousel owl-theme testimonials-slider">
+                {% for obj in topic_recommend %}
+                    <a href="/single/{{ obj.id }}">
+                    <div class="item-holder">
+                        <div class="item">
+
+                          <div class="text">
+                            <div class=""><img src="{{ obj.t_photo }}" alt="..." class="img-fluid"></div>
+                            <p>{{ obj.t_introduce |slice:100 }}</p><strong class="name">{{ obj.t_title }}</strong>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                {% endfor %}
+            </div>
+          </div>
+        </section>
+
+        <section id="features" class="features">
+          <div class="container">
+
+
+              {% for obj in topic_recommend %}
+                  <div class="row d-flex align-items-center">
+                      <div class="text col-lg-6 order-2 order-lg-1">
+
+                        <h4>{{ obj.t_title }}</h4>
+                        <p>{{ obj.t_introduce }} </p><a href="/single/{{ obj.id }}" class="btn btn-primary btn-shadow btn-gradient">查看</a>
+                      </div>
+                      <div class="image col-lg-6 order-1 order-lg-2"><img src="{{ obj.t_photo }}" alt="..." class="img-fluid"></div>
+                    </div>
+              {% endfor %}
+          </div>
+        </section>
+    {% endblock %}
+     <!-- 关于我们 -->
+        <section id="about-us" class="about-us bg-gray">
+          <div class="container">
+            <h2>About Us</h2>
+            <div class="row">
+              <p class="lead col-lg-10">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. or randomised words which don't look even slightly believable. </p>
+            </div><a href="#" class="btn btn-primary btn-shadow btn-gradient">Discover More</a>
+          </div>
+        </section>
+    <div class="tlinks">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
+
+    <div id="scrollTop">
+      <div class="d-flex align-items-center justify-content-end"><i class="fa fa-long-arrow-up"></i>返回顶部</div>
+    </div>
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6"><a href="#" class="brand">族谱论坛</a>
+            <ul class="contact-info list-unstyled">
+              <li><a href="mailto:918813641@qq.com">918813641@qq.com</a></li>
+              <li><a href="tel:18833278707">+86 188 3327 8707</a></li>
+            </ul>
+            <ul class="social-icons list-inline">
+              <li class="list-inline-item"><a href="#" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+              <li class="list-inline-item"><a href="#" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a href="#" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="#" target="_blank" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5>综合管理</h5>
+            <ul class="links list-unstyled">
+              <li> <a href="#">个人信息</a></li>
+              <li> <a href="#">修改密码</a></li>
+              <li> <a href="#">查看文章</a></li>
+              <li> <a href="#">发表论坛</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5>财政管理</h5>
+            <ul class="links list-unstyled">
+              <li> <a href="#">缴费系统</a></li>
+              <li> <a href="#">收入状态</a></li>
+              <li> <a href="#">VPN通道</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5>管理员入口</h5>
+            <ul class="links list-unstyled">
+              <li> <a href="#">入口一</a></li>
+              <li> <a href="#">入口二</a></li>
+              <li> <a href="#">入口三</a></li>
+              <li> <a href="#">入口四</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyrights">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <p>&copy; 2020 贵州省普安县新店镇 </p>
+            </div>
+            <div class="col-md-5 text-right">
+              <p><a href="/home" target="_blank" title="">族谱论坛</a> -- 爱家-- <a href="/home" title="" target="_blank">族谱论坛</a> </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Javascript files-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"> </script>
+    <script src="/static/web/js/bootstrap.min.js"></script>
+    <script src="/static/web/vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="/static/web/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="/static/js/front.js"></script>
+      </body>
+</html>
